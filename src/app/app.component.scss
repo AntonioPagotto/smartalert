@@ -1,0 +1,19 @@
+.forms-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+  }
+  .w-100 {
+    width: 100%;
+  }
+  w-40 {
+    width: 40%;
+  }
+  button{
+      margin: 10px 0 !important;
+  }
+  .mat-form-field-infix{
+    width: 100% !important;
+  }

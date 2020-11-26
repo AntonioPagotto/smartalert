@@ -1,0 +1,130 @@
+.card {
+  .card-icon {
+    i {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      border-radius: 50%;
+      font-size: 3rem;
+    }
+  }
+  .legend{
+    span:first-child{
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+// others styles
+
+$bg-color:#f2f3f8;
+$navbar-bg-color : #242939;
+$navbar-color:#6e7899;
+$sidebar-bg-color:#fff;
+$sidebar-color:#3d4465;
+$sidebar-icon-color:#c4cff9;
+$border-color: #f2f3f8;
+
+.table-container {
+  width: 100%;
+  padding: 15px;
+}
+table {
+  width: 100%;
+}
+.table-users {
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+tr {
+  line-height: 40px;
+  border-bottom: 1px solid #43aceb;
+}
+tr:last-child {
+  border-bottom: none;
+}
+td {
+  align-items: center;
+  padding-top: 15px;
+}
+td p {
+  text-align: center;
+}
+td a {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5rem;
+  line-height: 40px;
+  margin-right: 10px;
+}
+td:last-child {
+  margin-right: 0 !important;
+}
+.resolvida{
+  color: $border-color !important;
+  background-color: #059900;
+  width: 100px;
+  height: 40px;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 40px;
+}
+.em-processo{
+  color: $border-color !important;
+  background-color: #d3c616;
+  width: 150px;
+  height: 40px;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 40px;
+}
+.nao-resolvida{
+  color: $border-color !important;
+  background-color: #d31616;
+  width: 200px;
+  height: 40px;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 40px;
+}
+.ctn-solicitation{
+  padding: 10px;
+  color: $border-color;
+  background: $navbar-bg-color;
+  border-radius: 5px;
+}
+.ctn-solicitation div{
+  margin: 10px;
+}
+.btn-criar{
+  margin-bottom: 10px !important;
+}
+.m-2{
+  margin: 2px;
+}
+.p-3{
+  padding: 3px;
+}
+.d-flex{
+  display: flex;
+}
+.justify-space-between{
+  justify-content: space-between;
+}
+.justify-center{
+  justify-content: center;
+  text-align: center !important;
+}
+.flex-colum{
+  flex-direction: column;
+}
+.forms-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+input{
+  width: 450px !important;
+}

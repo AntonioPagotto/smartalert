@@ -1,0 +1,47 @@
+<div class="p-3 d-flex justify-space-between">
+  <h3>Solicitações</h3>
+  <div>
+    <button type="button" class="btn btn-success" href="#" routerLink="/csolicitation" routerLinkActive="active">Criar
+      Solicitação</button>
+  </div>
+</div>
+
+<mat-card>
+  <div *ngFor="let solicitation of solicitations">
+
+
+    <mat-card>
+      <mat-card-title>{{ solicitation.title }}</mat-card-title>
+
+      <div class="ctn-solicitation d-flex justify-space-between">
+
+        <div>
+          <h5>Descrição:</h5>
+          <textarea readonly name="text-area" id="" cols="70" rows="5">
+          {{ solicitation.description }}
+          </textarea>
+        </div>
+
+        <div class="d-flex flex-colum justify-center">
+          <h5>Status:</h5>
+
+          <button type="button" class="btn btn-success m-2">{{ solicitation.status }}</button>
+          <!-- <h6 class="em-processo">EM PROCESSO</h6>  -->
+
+          <!-- <h6 class="nao-resolvida">{{ solicitation.status }}</h6> -->
+
+          <h5>Localização:</h5>
+
+          <h6>{{ solicitation.local }}</h6>
+        </div>
+
+        <div>
+
+        </div>
+
+      </div>
+
+    </mat-card>
+
+  </div>
+</mat-card>

@@ -1,0 +1,72 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div *ngIf="isLogged === true">
+  <div class="wrapper default-theme" [ngClass]="getClasses()">
+    <app-navbar></app-navbar>
+    <main>
+      <app-sidebar></app-sidebar>
+      <div class="pages container-fluid pt-4 pb-4 pl-4 pr-4 ">
+        <router-outlet></router-outlet>
+        <hr>
+        <app-footer></app-footer>
+      </div>
+      <div class="overlay" (click)="toggleSidebar()"></div>
+    </main>
+  </div>
+</div>
+<div *ngIf="isLogged === false">
+  <div class="forms-container">
+    <mat-card class="forms-container w-100">
+      <mat-card-title>Faça Login</mat-card-title>
+      <form>
+        <mat-form-field class="w-100">
+          <input matInput placeholder="E-mail" [(ngModel)]="user.email" name="email">
+        </mat-form-field>
+        <mat-form-field class="w-100">
+          <input matInput placeholder="Senha" type="password" [(ngModel)]="user.password" name="password">
+        </mat-form-field>
+      </form>
+      <mat-accordion>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <!-- <mat-panel-title>
+              <a>Registre-se grátis!</a>
+            </mat-panel-title> -->
+            <mat-panel-description>
+              <h5>Registre-se</h5>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <form>
+            <mat-form-field class="w-100">
+              <input matInput placeholder="Nome" [(ngModel)]="user.name" name="name">
+            </mat-form-field>
+            <mat-form-field class="w-100">
+              <input matInput placeholder="Data de Nascimento" [(ngModel)]="user.nasc" type="date" name="nasc">
+            </mat-form-field>
+            <mat-form-field class="w-100">
+              <input matInput placeholder="Cidade" [(ngModel)]="user.local" name="local">
+            </mat-form-field>
+            <mat-form-field class="w-100">
+              <input matInput placeholder="E-mail" [(ngModel)]="user.email" name="email">
+            </mat-form-field>
+            <mat-form-field class="w-100">
+              <input matInput placeholder="Cargo" [(ngModel)]="user.cargo" name="cargo">
+            </mat-form-field>
+            <mat-form-field class="w-100">
+              <input matInput placeholder="Senha" type="password" [(ngModel)]="user.password" name="password">
+            </mat-form-field>
+          </form>
+          <button mat-raised-button (click)="createUser()" color="primary">
+            Registre-se
+          </button>
+        </mat-expansion-panel>
+      </mat-accordion>
+
+      <button mat-raised-button (click)="doLogin()" color="primary">
+        Login
+      </button>
+      <button mat-raised-button>
+        Cancelar
+      </button>
+    </mat-card>
+  </div>
+</div>

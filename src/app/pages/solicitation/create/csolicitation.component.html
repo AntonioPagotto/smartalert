@@ -1,0 +1,26 @@
+<div>
+  <mat-card class="forms-container">
+    <mat-card-title>Enviar uma Solicitação</mat-card-title>
+    <form class="forms-container w-100">
+      <mat-form-field>
+        <input matInput placeholder="Nome" [(ngModel)]="solicitation.title" name="title" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Descrição" [(ngModel)]="solicitation.description" name="description" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Endereço" [(ngModel)]="solicitation.local" name="local" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Data" [(ngModel)]="solicitation.data" type="date" name="data" required>
+      </mat-form-field>
+    </form>
+    <button class="btn btn-success" mat-raised-button (click)="createSolicitation()">
+      Enviar
+    </button>
+
+    <button class="btn btn-danger" mat-raised-button href="#" routerLink="/home" routerLinkActive="active">
+      Cancelar
+    </button>
+  </mat-card>
+</div>
