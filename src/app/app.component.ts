@@ -1,6 +1,11 @@
+import { CitiesService } from './services/cities.service';
+import { Observable } from 'rxjs';
 import { AuthService } from './services/auth.service';
 import { Component, OnInit } from '@angular/core';
+
 import User from './models/User';
+import City from './models/City';
+
 import { AppService } from './services/app.service';
 import { MatSnackBar } from '@angular/material';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -18,12 +23,15 @@ export class AppComponent implements OnInit {
 
   registerForm: FormGroup;
 
+  cities$: Observable<City[]>;
+  cities: City[]
+
   user: User = {
     name: '',
     nasc: '',
     local: '',
     email: '',
-    cargo: '',
+    cargo: 'Usuário Comum',
     password: ''
   }
 
@@ -33,7 +41,8 @@ export class AppComponent implements OnInit {
     private appService: AppService,
     private authService: AuthService,
     private snackBar: MatSnackBar,
-    public formBuilder: FormBuilder
+    public formBuilder: FormBuilder,
+    private citiesService: CitiesService
   ) {
     const statusLogin = localStorage.getItem('isLogged');
     if (this.statusLogin == true) {
@@ -56,6 +65,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.cities$ = this.citiesService.getAllCities();
+    this.cities$.subscribe((cities)=>this.cities = cities);
     this.registerForm = this.formBuilder.group({
       name: ['', Validators.required],
       nasc: ['', Validators.required],

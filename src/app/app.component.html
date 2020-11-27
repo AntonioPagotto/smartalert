@@ -40,19 +40,23 @@
               <input matInput placeholder="Nome" formControlName="name" [(ngModel)]="user.name" name="name">
             </mat-form-field>
             <mat-form-field class="w-100">
-              <input matInput placeholder="Data de Nascimento" formControlName="nasc" [(ngModel)]="user.nasc" name="nasc" type="date">
+              <input matInput placeholder="Data de Nascimento" formControlName="nasc" [(ngModel)]="user.nasc"
+                name="nasc" type="date">
             </mat-form-field>
-            <mat-form-field class="w-100">
-              <input matInput placeholder="Cidade" formControlName="local" [(ngModel)]="user.local" name="local">
+            <mat-form-field class="w-100" autofocus appearance="fill">
+              <mat-label>Cidade</mat-label>
+              <mat-select formControlName="local">
+                <mat-option *ngFor="let city of cities" [value]="city.id" class="z-index-full">
+                  {{city.name}}
+                </mat-option>
+              </mat-select>
             </mat-form-field>
             <mat-form-field class="w-100">
               <input matInput placeholder="E-mail" formControlName="email" [(ngModel)]="user.email" name="email">
             </mat-form-field>
             <mat-form-field class="w-100">
-              <input matInput placeholder="Cargo" formControlName="cargo" [(ngModel)]="user.cargo" name="cargo">
-            </mat-form-field>
-            <mat-form-field class="w-100">
-              <input matInput placeholder="Senha" type="password" formControlName="password" [(ngModel)]="user.password" name="password">
+              <input matInput placeholder="Senha" type="password" formControlName="password" [(ngModel)]="user.password"
+                name="password">
             </mat-form-field>
           </form>
           <button mat-raised-button (click)="createUser()" color="primary">

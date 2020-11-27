@@ -1,40 +1,63 @@
 {
   "users": [
     {
-      "name": "Antonio Pagotto",
-      "nasc": "1998-04-25",
-      "local": "Itajubá",
-      "email": "antoniopagotto121@gmail.com",
-      "cargo": "Estagiário",
-      "password": "senha123",
+      "name": "Antonio Bittencourt",
+      "nasc": "1999-05-20",
+      "local": "",
+      "email": "pagotto@email.com",
+      "cargo": "Usuário Comum",
+      "password": "pagotto1234",
       "id": 1
+    }
+  ],
+  "cities": [
+    {
+      "id": 10,
+      "name": "Itajubá"
     },
     {
-      "name": "Roberto Carvalho",
-      "nasc": "1999-01-25",
-      "local": "Itajubá",
-      "email": "roberto@email.com",
-      "cargo": "Vereador",
-      "password": "qualquer",
-      "id": 3
+      "id": 11,
+      "name": "Maria da Fé"
     },
     {
-      "name": "Paulo",
-      "nasc": "1955-09-25",
-      "local": "Itajubá",
-      "email": "paulo@email.com",
-      "cargo": "",
-      "password": "0800",
-      "id": 4
+      "id": 12,
+      "name": "Pouso Alegre"
     },
     {
-      "name": "Jubileu Alberto",
-      "nasc": "2020-10-20",
-      "local": "Itaquacetuba",
-      "email": "jubileu@email.com",
-      "cargo": "",
-      "password": "2020",
-      "id": 5
+      "id": 13,
+      "name": "Santa Rita do Sapucaí"
+    }
+  ],
+  "roles": [
+    {
+      "id": 15,
+      "name": "Prefeito"
+    },
+    {
+      "id": 16,
+      "name": "Vereador"
+    },
+    {
+      "id": 17,
+      "name": "Secretário"
+    },
+    {
+      "id": 18,
+      "name": "Usuário Comum"
+    }
+  ],
+  "status": [
+    {
+      "id": 19,
+      "name": "RESOLVIDO"
+    },
+    {
+      "id": 20,
+      "name": "EM PROCESSO"
+    },
+    {
+      "id": 22,
+      "name": "NÃO VISTO"
     }
   ],
   "solicitations": [

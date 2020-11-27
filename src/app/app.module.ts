@@ -23,7 +23,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
-import { MatExpansionModule, MatSnackBarModule } from '@angular/material';
+import { MatExpansionModule, MatSelectModule, MatSnackBarModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -52,7 +52,8 @@ import { MatExpansionModule, MatSnackBarModule } from '@angular/material';
     MatIconModule,
     HttpClientModule,
     MatExpansionModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSelectModule,
     ],
   providers: [],
   bootstrap: [AppComponent]
