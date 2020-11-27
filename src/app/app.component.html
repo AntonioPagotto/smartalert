@@ -40,6 +40,9 @@
               <input matInput placeholder="Nome" formControlName="name" [(ngModel)]="user.name" name="name">
             </mat-form-field>
             <mat-form-field class="w-100">
+              <input matInput placeholder="Email" formControlName="email" [(ngModel)]="user.email" name="email">
+            </mat-form-field>
+            <mat-form-field class="w-100">
               <input matInput placeholder="Data de Nascimento" formControlName="nasc" [(ngModel)]="user.nasc"
                 name="nasc" type="date">
             </mat-form-field>
@@ -59,7 +62,7 @@
                 name="password">
             </mat-form-field>
           </form>
-          <button mat-raised-button (click)="createUser()" color="primary">
+          <button mat-raised-button (click)="register()" color="primary">
             Registre-se
           </button>
         </mat-expansion-panel>

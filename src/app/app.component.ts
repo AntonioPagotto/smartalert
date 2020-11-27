@@ -66,7 +66,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.cities$ = this.citiesService.getAllCities();
-    this.cities$.subscribe((cities)=>this.cities = cities);
+    this.cities$.subscribe((cities) => this.cities = cities);
     this.registerForm = this.formBuilder.group({
       name: ['', Validators.required],
       nasc: ['', Validators.required],
@@ -76,19 +76,25 @@ export class AppComponent implements OnInit {
     })
   }
 
+  register() {
+    this.authService.getAllUserData().subscribe((users) => {
+      this.users = users;
+      const email = this.user.email;
+      if (!this.registerForm.valid) {
+        return this.showMessage('Preencha todos os campos!', true);
+      }
+      if (this.users.find(user => user.email == email)) {
+        return this.showMessage('Esse usuário já existe!', true);
+      }
+      this.authService.createUser(this.user).subscribe(() => {
+        console.log('Usuário postado!');
+      });
+    });
+  }
+
   logout() {
     this.isLogged = false;
     localStorage.setItem('isLogged', 'false')
-  }
-
-  createUser() {
-    if (this.registerForm.valid) {
-      this.authService.createUser(this.user).subscribe(() => {
-        console.log('Usuário postado!');
-      })
-    } else {
-      this.showMessage('Preencha todos os campos!', true);
-    }
   }
 
   doLogin() {

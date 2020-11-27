@@ -8,6 +8,15 @@
       "cargo": "Usuário Comum",
       "password": "pagotto1234",
       "id": 1
+    },
+    {
+      "name": "Antonio Bittencourt",
+      "nasc": "0022-02-22",
+      "local": "",
+      "email": "222",
+      "cargo": "Usuário Comum",
+      "password": "2222",
+      "id": 2
     }
   ],
   "cities": [

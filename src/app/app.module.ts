@@ -24,6 +24,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { MatExpansionModule, MatSelectModule, MatSnackBarModule } from '@angular/material';
+import { ManagerComponent } from './pages/manager/manager.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MatExpansionModule, MatSelectModule, MatSnackBarModule } from '@angular
     FooterComponent,
     HomeComponent,
     CSolicitationComponent,
+    ManagerComponent,
   ],
   imports: [
     BrowserModule,
