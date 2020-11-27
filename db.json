@@ -26,6 +26,15 @@
       "cargo": "",
       "password": "0800",
       "id": 4
+    },
+    {
+      "name": "Jubileu Alberto",
+      "nasc": "2020-10-20",
+      "local": "Itaquacetuba",
+      "email": "jubileu@email.com",
+      "cargo": "",
+      "password": "2020",
+      "id": 5
     }
   ],
   "solicitations": [

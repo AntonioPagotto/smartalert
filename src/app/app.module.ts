@@ -51,7 +51,8 @@ import { MatExpansionModule, MatSnackBarModule } from '@angular/material';
     MatToolbarModule,
     MatIconModule,
     HttpClientModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSnackBarModule
     ],
   providers: [],
   bootstrap: [AppComponent]
