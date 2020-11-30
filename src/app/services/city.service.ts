@@ -8,16 +8,13 @@ import City from '../models/City';
 @Injectable({
   providedIn: 'root'
 })
-export class CitiesService {
-
+export class CityService {
 
   apiUrl = 'http://localhost:3000'
 
   constructor(private http: HttpClient) { }
 
   //create
-
-
 
   createSolicitation(city: City) {
     return this.http.post<City>(`${this.apiUrl}/cities`, city);

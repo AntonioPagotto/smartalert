@@ -1,5 +1,31 @@
-<mat-tab-group>
-  <mat-tab label="Cidades"> Cidades </mat-tab>
-  <mat-tab label="Cargos"> Cargos </mat-tab>
-  <mat-tab label="Usuários"> Usuários </mat-tab>
-</mat-tab-group>
+<div class="d-flex justify-space-between">
+  <mat-tab-group class="m-auto">
+    <mat-tab label="Cidades">
+      <div *ngFor="let city of cities">
+        <div class="i-list">
+          <h6>
+            {{ city.name }}
+          </h6>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Cargos">
+      <div *ngFor="let role of roles">
+        <div class="i-list">
+          <h6>
+            {{ role.name }}
+          </h6>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Usuários">
+      <div *ngFor="let user of users">
+        <div class="i-list">
+          <h6>
+            {{ user.name }}
+          </h6>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

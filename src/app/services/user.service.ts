@@ -8,7 +8,7 @@ import Login from '../models/Login';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class UserService {
 
   apiUrl = 'http://localhost:3000'
 

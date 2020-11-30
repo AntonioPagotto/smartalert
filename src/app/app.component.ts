@@ -1,6 +1,6 @@
-import { CitiesService } from './services/cities.service';
+import { CityService } from './services/city.service';
+import { UserService } from './services/user.service';
 import { Observable } from 'rxjs';
-import { AuthService } from './services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 import User from './models/User';
@@ -39,10 +39,10 @@ export class AppComponent implements OnInit {
 
   constructor(
     private appService: AppService,
-    private authService: AuthService,
+    private userService: UserService,
     private snackBar: MatSnackBar,
     public formBuilder: FormBuilder,
-    private citiesService: CitiesService
+    private cityService: CityService
   ) {
     const statusLogin = localStorage.getItem('isLogged');
     if (this.statusLogin == true) {
@@ -65,7 +65,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.cities$ = this.citiesService.getAllCities();
+    this.cities$ = this.cityService.getAllCities();
     this.cities$.subscribe((cities) => this.cities = cities);
     this.registerForm = this.formBuilder.group({
       name: ['', Validators.required],
@@ -77,7 +77,7 @@ export class AppComponent implements OnInit {
   }
 
   register() {
-    this.authService.getAllUserData().subscribe((users) => {
+    this.userService.getAllUserData().subscribe((users) => {
       this.users = users;
       const email = this.user.email;
       if (!this.registerForm.valid) {
@@ -86,7 +86,7 @@ export class AppComponent implements OnInit {
       if (this.users.find(user => user.email == email)) {
         return this.showMessage('Esse usuário já existe!', true);
       }
-      this.authService.createUser(this.user).subscribe(() => {
+      this.userService.createUser(this.user).subscribe(() => {
         console.log('Usuário postado!');
       });
     });
@@ -100,7 +100,7 @@ export class AppComponent implements OnInit {
   doLogin() {
     const email = this.user.email;
     const password = this.user.password;
-    this.authService.getAllUserData().subscribe((users) => {
+    this.userService.getAllUserData().subscribe((users) => {
       this.users = users;
       if (this.users.find(user => user.email == email && user.password == password)) {
         this.isLogged = true;
