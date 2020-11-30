@@ -1,9 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div *ngIf="isLogged === true">
+<!-- <div *ngIf="isLogged === true"> -->
   <div class="wrapper default-theme" [ngClass]="getClasses()">
     <app-navbar></app-navbar>
     <main>
-      <app-sidebar></app-sidebar>
       <div class="pages container-fluid pt-4 pb-4 pl-4 pr-4 ">
         <router-outlet></router-outlet>
         <hr>
@@ -12,8 +11,8 @@
       <div class="overlay" (click)="toggleSidebar()"></div>
     </main>
   </div>
-</div>
-<div *ngIf="isLogged === false">
+<!-- </div> -->
+<!-- <div *ngIf="isLogged === false">
   <div class="forms-container">
     <mat-card class="forms-container w-100">
       <mat-card-title>Faça Login</mat-card-title>
@@ -28,9 +27,6 @@
       <mat-accordion>
         <mat-expansion-panel hideToggle>
           <mat-expansion-panel-header>
-            <!-- <mat-panel-title>
-              <a>Registre-se grátis!</a>
-            </mat-panel-title> -->
             <mat-panel-description>
               <h5>Registre-se</h5>
             </mat-panel-description>
@@ -76,4 +72,4 @@
       </button>
     </mat-card>
   </div>
-</div>
+</div> -->

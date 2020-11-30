@@ -1,4 +1,4 @@
-import { SolicitationService } from './../../services/solicitation.service';
+import { SolicitationService } from './../../../services/solicitation.service';
 import { Component, OnInit } from '@angular/core';
 
 import Solicitation from 'src/app/models/Solicitation';
