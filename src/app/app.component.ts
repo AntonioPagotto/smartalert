@@ -18,8 +18,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AppComponent implements OnInit {
 
   title = 'pro-dashboard-angular';
-  statusLogin: boolean;
-  isLogged: boolean;
+  isLogged: string;
 
   registerForm: FormGroup;
 
@@ -45,11 +44,12 @@ export class AppComponent implements OnInit {
     private cityService: CityService
   ) {
     const statusLogin = localStorage.getItem('isLogged');
-    if (this.statusLogin == true) {
-      this.isLogged = true;
+    console.log(statusLogin, "status login")
+    if (statusLogin == "true") {
+      this.isLogged = "true";
       localStorage.setItem('isLogged', 'true');
     } else {
-      this.isLogged = false;
+      this.isLogged = "false";
       localStorage.setItem('isLogged', 'false');
     }
   }
@@ -93,7 +93,7 @@ export class AppComponent implements OnInit {
   }
 
   logout() {
-    this.isLogged = false;
+    this.isLogged = "false";
     localStorage.setItem('isLogged', 'false')
   }
 
@@ -103,7 +103,7 @@ export class AppComponent implements OnInit {
     this.userService.getAllUserData().subscribe((users) => {
       this.users = users;
       if (this.users.find(user => user.email == email && user.password == password)) {
-        this.isLogged = true;
+        this.isLogged = "true";
         localStorage.setItem('isLogged', 'true');
       } else {
         this.showMessage('E-mail ou senha inválidos!', true);

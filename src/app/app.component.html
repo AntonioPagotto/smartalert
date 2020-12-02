@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div *ngIf="isLogged === true">
+<div *ngIf="isLogged == 'true'">
   <div class="wrapper default-theme" [ngClass]="getClasses()">
     <app-navbar></app-navbar>
     <main>
@@ -12,7 +12,7 @@
     </main>
   </div>
 </div>
-<div *ngIf="isLogged === false">
+<div *ngIf="isLogged === 'false'">
   <div class="forms-container">
     <mat-card class="forms-container w-100">
       <mat-card-title>Faça Login</mat-card-title>

@@ -16,8 +16,12 @@
       "id": 1
     },
     {
+      "name": "Itajubá",
+      "id": 3
+    },
+    {
       "name": "Carmo de Minas",
-      "id": 2
+      "id": 4
     }
   ],
   "roles": [
