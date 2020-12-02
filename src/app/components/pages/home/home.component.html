@@ -1,37 +1,43 @@
 <div class="p-3 d-flex">
   <h3>Notícias da Cidade</h3>
 </div>
-
-<ngb-carousel *ngIf="images">
-  <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img src="https://www.revide.com.br/media/upload/noticias/2019/06/18/16/56/fotos_aereas_ribeirao_preto_creditos_jfpimentaimg_0848_(21).jpeg" alt="Random first slide">
-    </div>
-    <div class="carousel-caption">
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img src="https://praondevaisaopaulo.com.br/wp-content/uploads/2019/07/cidades-inteligentes-web-2.jpg" alt="Random second slide">
-    </div>
-    <div class="carousel-caption">
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img src="https://s2.glbimg.com/1Wh9VrSZokI1CoRhHpdgeTapEnI=/e.glbimg.com/og/ed/f/original/2018/02/22/cidade.jpg" alt="Random third slide">
-    </div>
-    <div class="carousel-caption">
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </div>
-  </ng-template>
-</ngb-carousel>
-
+<div class="d-flex justify-center">
+  <ngb-carousel>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img widht="800" height="600"
+          src="https://www.revide.com.br/media/upload/noticias/2019/06/18/16/56/fotos_aereas_ribeirao_preto_creditos_jfpimentaimg_0848_(21).jpeg"
+          alt="Random first slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>First slide label</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img widht="800" height="600"
+          src="https://praondevaisaopaulo.com.br/wp-content/uploads/2019/07/cidades-inteligentes-web-2.jpg"
+          alt="Random second slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Second slide label</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img widht="800" height="600"
+          src="https://s2.glbimg.com/1Wh9VrSZokI1CoRhHpdgeTapEnI=/e.glbimg.com/og/ed/f/original/2018/02/22/cidade.jpg"
+          alt="Random third slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Third slide label</h3>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
 <div class="p-3 d-flex justify-space-between">
   <h3>Solicitações</h3>
   <div>
@@ -40,42 +46,14 @@
   </div>
 </div>
 
-<mat-card>
-  <div *ngFor="let solicitation of solicitations">
-
-
-    <mat-card>
-      <mat-card-title>{{ solicitation.title }}</mat-card-title>
-
-      <div class="ctn-solicitation d-flex justify-space-between">
-
-        <div>
-          <h5>Descrição:</h5>
-          <textarea readonly name="text-area" id="" cols="70" rows="5">
-          {{ solicitation.description }}
-          </textarea>
-        </div>
-
-        <div class="d-flex flex-colum justify-center">
-          <h5>Status:</h5>
-
-          <button type="button" class="btn btn-success m-2">{{ solicitation.status }}</button>
-          <!-- <h6 class="em-processo">EM PROCESSO</h6>  -->
-
-          <!-- <h6 class="nao-resolvida">{{ solicitation.status }}</h6> -->
-
-          <h5>Localização:</h5>
-
-          <h6>{{ solicitation.local }}</h6>
-        </div>
-
-        <div>
-
-        </div>
-
-      </div>
-
-    </mat-card>
-
+<div class="d-flex flex-wrap">
+  <div *ngFor="let solicitation of solicitations" class="col-xl-2 col-md-2 col-sm-4 ctn-solicitation p-3">
+    <mat-card-title>{{ solicitation.title }}</mat-card-title>
+    <div class="d-flex justify-center">
+      <h6>{{ solicitation.local }}</h6>
+      <button type="button" class="btn btn-success m-2 btn-status">{{ solicitation.status }}</button>
+      <!-- <h6 class="em-processo">EM PROCESSO</h6>  -->
+      <!-- <h6 class="nao-resolvida">{{ solicitation.status }}</h6> -->
+    </div>
   </div>
-</mat-card>
+</div>

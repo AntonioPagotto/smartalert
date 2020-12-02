@@ -12,7 +12,7 @@
             <h6>
               {{ city.name }}
             </h6>
-            <mat-icon (click)="removeCity(city.id)">delete</mat-icon>
+            <mat-icon class="delete" (click)="removeCity(city.id)">delete</mat-icon>
           </div>
         </mat-card>
       </div>
@@ -29,19 +29,21 @@
             <h6>
               {{ role.name }}
             </h6>
-            <mat-icon (click)="removeRole(role.id)">delete</mat-icon>
+            <mat-icon class="delete" (click)="removeRole(role.id)">delete</mat-icon>
           </div>
           </mat-card>
       </div>
     </mat-tab>
     <mat-tab label="Usuários">
       <div *ngFor="let user of users">
-        <div class="i-list d-flex justify-space-between">
-          <h6>
-            {{ user.name }}
-          </h6>
-          <mat-icon (click)="removeUser(user.id)">delete</mat-icon>
-        </div>
+        <mat-card class="m-3">
+          <div class="d-flex justify-space-between">
+            <h6>
+              {{ user.name }}
+            </h6>
+            <mat-icon class="delete" (click)="removeUser(user.id)">delete</mat-icon>
+          </div>
+          </mat-card>
       </div>
     </mat-tab>
   </mat-tab-group>

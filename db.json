@@ -57,13 +57,13 @@
       "id": 3,
       "title": "Limpeza de Lote - Centro",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      "status": "ativo",
+      "status": "ATIVO",
       "local": "Rua Carlos Braga, 81 - Centro"
     },
     {
       "title": "Esgoto a céu aberto",
       "description": "Possui esgoto a céu aberto em frente a UNIFEI na altura do Rei Burgão. Aparentemente um bueiro explodiu e voou esgoto para todo lado e está fedendo muito na rua e até agora nenhuma providência foi tomada.",
-      "status": "ativo",
+      "status": "ATIVO",
       "local": "Avenida BPS, 12458 - BPS",
       "data": "26-05-2020",
       "id": 4
@@ -71,7 +71,7 @@
     {
       "title": "Buraco no asfalto",
       "description": "Há um buraco gigante no asfalto na rua nova.",
-      "status": "ativo",
+      "status": "ATIVO",
       "local": "Rua nova 432 - Centro",
       "data": "2020-11-24",
       "id": 5
@@ -79,7 +79,7 @@
     {
       "title": "Retirada de entulho no centro",
       "description": "Possui uma caçamba com entulho abandonado no centro da cidade",
-      "status": "ativo",
+      "status": "ATIVO",
       "local": "Rua xavier lisboa 403, centro - itajubá",
       "data": "2020-11-25",
       "id": 6
