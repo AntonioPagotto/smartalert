@@ -16,6 +16,10 @@ export class RoleService {
         return this.http.post<Role>(`${this.apiUrl}/roles`, role);
     }
 
+    deleteRole(id: number) {
+        return this.http.delete<void>(`${this.apiUrl}/roles/${id}`);
+    }
+
     getAllRoles() {
         return this.http.get<Role[]>(`${this.apiUrl}/roles`).pipe((obj) => obj);
     }

@@ -1,8 +1,7 @@
+import { map } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Observable, EMPTY } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
 import City from '../models/City';
 
 @Injectable({
@@ -14,23 +13,29 @@ export class CityService {
 
   constructor(private http: HttpClient) { }
 
-  //create
+  //crud City
 
-  createSolicitation(city: City) {
+  createCity(city: City) {
     return this.http.post<City>(`${this.apiUrl}/cities`, city);
   }
 
-  getAllCities(): Observable<City[]> {
+  readCityById(id: number){
+    return this.http.get<City>(`${this.apiUrl}/cities/${id}`)
+  }
+
+  editCity(city: City) {
+    return this.http.post<City>(`${this.apiUrl}/cities/${city.id}`, city.id);
+  }
+
+  deleteCity(id: number){
+    return this.http.delete<void>(`${this.apiUrl}/cities/${id}`)
+  }
+
+  //login
+
+  getAllCities(){
     return this.http.get<City[]>(`${this.apiUrl}/cities`).pipe(map((obj) => obj))
   }
 
-  //update
-
-  updateSolicitation(city: City): Observable<City> {
-    return this.http.put<City>(`${this.apiUrl}/cities/${city.id}`, city).pipe(
-      map((obj)=>obj));
-  }
-
-  //delete
 
 }

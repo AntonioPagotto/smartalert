@@ -24,6 +24,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { MatExpansionModule, MatSelectModule, MatSnackBarModule, MatTabsModule } from '@angular/material';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { MatExpansionModule, MatSelectModule, MatSnackBarModule, MatTabsModule }
     MatExpansionModule,
     MatSnackBarModule,
     MatSelectModule,
-    MatTabsModule  
+    MatTabsModule,
+    NgbCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

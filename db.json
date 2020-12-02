@@ -12,30 +12,18 @@
   ],
   "cities": [
     {
-      "id": 10,
-      "name": "Itajubá"
+      "name": "Paraibuna",
+      "id": 1
     },
     {
-      "id": 11,
-      "name": "Maria da Fé"
-    },
-    {
-      "id": 12,
-      "name": "Pouso Alegre"
-    },
-    {
-      "id": 13,
-      "name": "Santa Rita do Sapucaí"
+      "name": "Carmo de Minas",
+      "id": 2
     }
   ],
   "roles": [
     {
       "id": 15,
       "name": "Prefeito"
-    },
-    {
-      "id": 16,
-      "name": "Vereador"
     },
     {
       "id": 17,

@@ -1,29 +1,46 @@
 <div class="d-flex justify-space-between">
   <mat-tab-group class="m-auto">
     <mat-tab label="Cidades">
+      <mat-form-field class="w-100" appearance="legacy">
+        <mat-label>Adicionar Cidade</mat-label>
+        <input [(ngModel)]="newcity.name" autofocus matInput placeholder="Insira a nova Cidade">
+        <mat-icon class="cursor-pointer" (click)="addCity()" matSuffix>add</mat-icon>
+      </mat-form-field>
       <div *ngFor="let city of cities">
-        <div class="i-list">
-          <h6>
-            {{ city.name }}
-          </h6>
-        </div>
+        <mat-card class="m-3">
+          <div class="d-flex justify-space-between">
+            <h6>
+              {{ city.name }}
+            </h6>
+            <mat-icon (click)="removeCity(city.id)">delete</mat-icon>
+          </div>
+        </mat-card>
       </div>
     </mat-tab>
     <mat-tab label="Cargos">
+      <mat-form-field class="w-100" appearance="legacy">
+        <mat-label>Adicionar Cargo</mat-label>
+        <input [(ngModel)]="newrole.name" autofocus matInput placeholder="Insira o novo Cargo">
+        <mat-icon class="cursor-pointer" (click)="addRole()" matSuffix>add</mat-icon>
+      </mat-form-field>
       <div *ngFor="let role of roles">
-        <div class="i-list">
-          <h6>
-            {{ role.name }}
-          </h6>
-        </div>
+        <mat-card class="m-3">
+          <div class="d-flex justify-space-between">
+            <h6>
+              {{ role.name }}
+            </h6>
+            <mat-icon (click)="removeRole(role.id)">delete</mat-icon>
+          </div>
+          </mat-card>
       </div>
     </mat-tab>
     <mat-tab label="Usuários">
       <div *ngFor="let user of users">
-        <div class="i-list">
+        <div class="i-list d-flex justify-space-between">
           <h6>
             {{ user.name }}
           </h6>
+          <mat-icon (click)="removeUser(user.id)">delete</mat-icon>
         </div>
       </div>
     </mat-tab>
