@@ -25,7 +25,7 @@ export class UserService {
   }
 
   editUser(user: User) {
-    return this.http.post<User>(`${this.apiUrl}/users/${user.id}`, user.id);
+    return this.http.post<User>(`${this.apiUrl}/users/${user.id}`, user);
   }
 
   deleteUser(id: number){

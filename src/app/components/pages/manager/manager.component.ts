@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import City from 'src/app/models/City';
 import Role from 'src/app/models/Role';
 import User from 'src/app/models/User';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-manager',
@@ -17,6 +18,16 @@ export class ManagerComponent implements OnInit {
   roles: Role[];
   users: User[];
 
+  user: User = {
+    name: '',
+    nasc: '',
+    local: '',
+    email: '',
+    cargo: '',
+    password: ''
+  }
+
+
   newrole: Role = {
     name: ''
   }
@@ -25,19 +36,28 @@ export class ManagerComponent implements OnInit {
     name: ''
   }
 
+  formUser: FormGroup;
+
+
   constructor(
     private cityService: CityService,
     private roleService: RoleService,
     private userService: UserService
-    ) { }
+  ) { }
 
   ngOnInit() {
     this.cityService.getAllCities().subscribe(cities => this.cities = cities);
     this.roleService.getAllRoles().subscribe(roles => this.roles = roles);
     this.userService.getAllUserData().subscribe(users => this.users = users);
   }
-  
-  removeCity(id: number){
+
+  addCity() {
+    this.cityService.createCity(this.newcity).subscribe(() => {
+      this.ngOnInit();
+    });
+  }
+
+  removeCity(id: number) {
     this.cityService.deleteCity(id).subscribe(() => {
       this.ngOnInit();
     }, (err) => {
@@ -45,19 +65,13 @@ export class ManagerComponent implements OnInit {
     })
   }
 
-  addCity(){
-    this.cityService.createCity(this.newcity).subscribe(() => {
-      this.ngOnInit();
-    });
-  }
-
-  addRole(){
+  addRole() {
     this.roleService.createRole(this.newrole).subscribe(() => {
       this.ngOnInit();
     });
   }
 
-  removeRole(id: number){
+  removeRole(id: number) {
     this.roleService.deleteRole(id).subscribe(() => {
       this.ngOnInit();
     }, (err) => {
@@ -65,7 +79,15 @@ export class ManagerComponent implements OnInit {
     })
   }
 
-  removeUser(id: number){
+  putUser(id: number){
+    this.userService.getAllUserData().subscribe((users) => {
+      this.users = users;
+      this.userService.editUser(this.user).subscribe(() => {
+      });
+    });
+  }
+
+  removeUser(id: number) {
     this.userService.deleteUser(id).subscribe(() => {
       this.ngOnInit();
     }, (err) => {
