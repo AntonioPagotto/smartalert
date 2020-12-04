@@ -8,6 +8,15 @@
       "cargo": "Usuário Comum",
       "password": "pagotto",
       "id": 3
+    },
+    {
+      "name": "Antonio Bittencourt",
+      "nasc": "1998-05-26",
+      "local": "",
+      "email": "antoniobittencourt@gmail.com",
+      "cargo": "Usuário Comum",
+      "password": "pagotto",
+      "id": 4
     }
   ],
   "cities": [
@@ -36,6 +45,10 @@
     {
       "id": 18,
       "name": "Usuário Comum"
+    },
+    {
+      "name": "Vereador",
+      "id": 19
     }
   ],
   "status": [
