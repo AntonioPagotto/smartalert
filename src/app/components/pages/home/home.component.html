@@ -1,21 +1,17 @@
-
 <div class="p-3 d-flex justify-space-between">
-  <h3>Solicitações</h3>
+  <h1>SOLICITAÇÕES</h1>
   <div>
     <button type="button" class="btn btn-success" href="#" routerLink="/csolicitation" routerLinkActive="active">Criar
       Solicitação</button>
   </div>
 </div>
 
-<div class="d-flex flex-wrap">
-  <div *ngFor="let solicitation of solicitations" class="col-xl-2 col-md-2 col-sm-4 ctn-solicitation p-3">
-    <mat-card-title>{{ solicitation.title }}</mat-card-title>
+<div class="d-flex flex-wrap justify-center">
+  <div *ngFor="let solicitation of solicitations" [ngClass]="{'resolvida': solicitation.status === 'ATIVO','nao-resolvida': solicitation.status !== 'ATIVO'}" class="col-xl-2 col-md-2 col-sm-4 ctn-solicitation p-3">
+    <mat-card-title><h3>{{ solicitation.title }}</h3></mat-card-title>
     <div class="d-flex justify-center flex-colum">
-      <h6>Endereço:</h6>
+      <h6>LOCAL:</h6>
       <p>{{ solicitation.local }}</p>
-      <button type="button" class="btn btn-success m-2 btn-status">{{ solicitation.status }}</button>
-      <!-- <h6 class="em-processo">EM PROCESSO</h6>  -->
-      <!-- <h6 class="nao-resolvida">{{ solicitation.status }}</h6> -->
     </div>
   </div>
 </div>
