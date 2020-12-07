@@ -2,6 +2,14 @@
 <div *ngIf="isLogged == 'true'">
   <div class="wrapper default-theme" [ngClass]="getClasses()">
     <app-navbar></app-navbar>
+    <header id="header" style="background-image: url('./assets/img/1.jpg');">
+      <div id="cover">
+        <div class="container">
+          <h1>Smart Alert</h1>
+          <p>Um sistema de alertas para a sua cidade!</p>
+        </div>
+      </div>
+    </header>
     <main>
       <div class="pages container-fluid pt-4 pb-4 pl-4 pr-4 ">
         <router-outlet></router-outlet>
