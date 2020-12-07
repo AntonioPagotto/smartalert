@@ -15,8 +15,8 @@ export class HomeComponent implements OnInit {
   constructor(private solicitationService: SolicitationService) { }
 
   ngOnInit() {
-    this.solicitationService.getAllSolicitations().subscribe(solicitations => {
-      this.solicitations = solicitations
+    this.solicitationService.getAllSolicitations().subscribe(solicitation => {
+      this.solicitations = solicitation;
     })
   }
 
