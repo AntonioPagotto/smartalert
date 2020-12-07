@@ -104,6 +104,38 @@
       "local": "Em frente a prefeitura municipal",
       "data": "2020-12-07",
       "id": 7
+    },
+    {
+      "title": "Falta de Insumos no Hospital",
+      "description": "Não há mais insumos cirúrgicos no Hospital Municipal.",
+      "status": "inativo",
+      "local": "Hospital Municipal",
+      "data": "2020-12-07",
+      "id": 8
+    },
+    {
+      "title": "Falta de Policiamento",
+      "description": "Há uma grande falta de policiamento nos bairros marginais.",
+      "status": "inativo",
+      "local": "Bairros Marginais",
+      "data": "2020-12-07",
+      "id": 9
+    },
+    {
+      "title": "Falta de Material Escolar",
+      "description": "Há uma grande falta de material escolar nas escolas municipais.",
+      "status": "inativo",
+      "local": "Escola Municipal Central Protótipa",
+      "data": "2020-05-20",
+      "id": 10
+    },
+    {
+      "title": "Ausência dos Vereadores",
+      "description": "Os vereadores não tem comparecido as reuniões semanais da câmara municipal",
+      "status": "inativo",
+      "local": "Câmara Municipal",
+      "data": "2020-12-07",
+      "id": 11
     }
   ]
 }
