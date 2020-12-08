@@ -14,7 +14,7 @@ export class CSolicitationComponent implements OnInit {
   solicitation: Solicitation = {
     title: '',
     description: '',
-    status: 'inativo',
+    status: 'NÃO LIDO',
     local: '',
     data: ''
   }

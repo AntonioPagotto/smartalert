@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
 
   title = 'pro-dashboard-angular';
   isLogged: string;
+  isAdmin: string;
 
   registerForm: FormGroup;
 
@@ -103,6 +104,14 @@ export class AppComponent implements OnInit {
     this.userService.getAllUserData().subscribe((users) => {
       this.users = users;
       if (this.users.find(user => user.email == email && user.password == password)) {
+
+        if(this.user.cargo == 'admin'){
+          this.isAdmin = "true";
+          localStorage.setItem('isAdmin', 'true')
+        } else {
+          this.isAdmin = "false";
+          localStorage.setItem('isAdmin', 'false')
+        }
         this.isLogged = "true";
         localStorage.setItem('isLogged', 'true');
       } else {

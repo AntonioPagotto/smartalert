@@ -11,13 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class SingleComponent implements OnInit {
 
 
-  solicitation: Solicitation = {
-    title: '',
-    description: '',
-    status: '',
-    local: '',
-  }
-
+  solicitation: Solicitation;
 
 
   constructor(
@@ -26,12 +20,24 @@ export class SingleComponent implements OnInit {
     private route: ActivatedRoute
   ) { }
 
+
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.solicitationService.getSolicitationById(id).subscribe((solicitation) => {
       this.solicitation = solicitation;
       console.log(solicitation)
     });
+  }
+
+
+  changeStatus() {
+    if (this.solicitation.status === 'RESOLVIDO') {
+      this.solicitation.status = 'NÃO LIDO';
+      this.solicitationService.updateSolicitation(this.solicitation).subscribe();
+    } else {
+      this.solicitation.status = 'RESOLVIDO';
+      this.solicitationService.updateSolicitation(this.solicitation).subscribe();
+    }
   }
 
 }

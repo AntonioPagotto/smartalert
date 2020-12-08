@@ -35,6 +35,7 @@ export class SolicitationService {
   //update
 
   updateSolicitation(solicitation: Solicitation): Observable<Solicitation> {
+    console.log(solicitation)
     return this.http.put<Solicitation>(`${this.apiUrl}/${solicitation.id}`, solicitation).pipe(
       map((obj)=>obj));
   }
