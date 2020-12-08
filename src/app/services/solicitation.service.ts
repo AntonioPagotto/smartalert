@@ -22,8 +22,14 @@ export class SolicitationService {
     return this.http.post<Solicitation>(`${this.apiUrl}/solicitations`, solicitation);
   }
 
+  //gets
+
   getAllSolicitations(): Observable<Solicitation[]> {
     return this.http.get<Solicitation[]>(`${this.apiUrl}/solicitations`).pipe(map((obj) => obj))
+  }
+
+  getSolicitationById(id: number){
+    return this.http.get<Solicitation>(`${this.apiUrl}/solicitations/${id}`).pipe(map((obj) => obj));
   }
 
   //update
