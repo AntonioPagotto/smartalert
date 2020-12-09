@@ -10,6 +10,10 @@
  O sistema foi feito para estudos e para um trabalho de faculdade. Como não possui backend, muitos dos serviços realizados no frontend não deveriam ser feitos pelo mesmo, então desconsiderar itens como autenticação de login no frontend e a fragilidade do sistema.
  
  # PREVIEW
+  ## REGISTRO
+ ![alt_text](https://imgur.com/Uj0qVFm.png)
+## LOGIN
+ ![alt_text](https://imgur.com/COym74h.png)
  ## HOME
  ![alt_text](https://i.imgur.com/71CU4vT.png)
  ## ÁREA DO ADMINISTRADOR
