@@ -1,0 +1,31 @@
+<div class="p-3 d-flex justify-space-between">
+    <h1>{{solicitation.title}}</h1>
+</div>
+<div class="p-3">
+    <h4>Status:</h4>
+    <div *ngIf="solicitation.status == 'RESOLVIDO'">
+        <button (click)="changeStatus()" mat-button class="btn-success success">{{solicitation.status}}</button>
+    </div>
+    <div *ngIf="solicitation.status != 'RESOLVIDO'">
+        <button (click)="changeStatus()" mat-button class="btn-danger danger">{{solicitation.status}}</button>
+    </div>
+    
+</div>
+<div class="p-3">
+    <h4>Descrição:</h4>
+    <mat-card>
+        {{solicitation.description}}
+    </mat-card>
+</div>
+<div class="p-3">
+    <h4>Localização:</h4>
+    <mat-card>
+        {{solicitation.local}}
+    </mat-card>
+</div>
+<div class="p-3">
+    <h4>Data:</h4>
+    <mat-card>
+        {{solicitation.data}}
+    </mat-card>
+</div>

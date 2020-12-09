@@ -31,8 +31,11 @@ h2,
 h3,
 h4,
 h5,
-p {
+span {
   color: $border-color;
+}
+h1,h2,h3,h4,h5,h6{
+  text-transform: uppercase;
 }
 
 /* header */
@@ -56,7 +59,13 @@ p {
   max-width: 500px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   text-align: center;
+}
+#header img{
+  margin: auto;
+  background: #ffffffc4;
+  border-radius: 45%;
 }
 /* fim header */
 .table-container {
@@ -99,38 +108,29 @@ td:last-child {
   cursor: pointer;
 }
 .resolvida {
-  color: $border-color !important;
-  background-color: #059900;
-  width: 100px;
-  height: 40px;
-  border-radius: 6px;
-  text-align: center;
-  line-height: 40px;
-}
-.em-processo {
-  color: $border-color !important;
-  background-color: #d3c616;
-  width: 150px;
-  height: 40px;
-  border-radius: 6px;
-  text-align: center;
-  line-height: 40px;
+  color: $bg-color;
+  background-color: #28a74696;
+  border-color: #28a745;
 }
 .nao-resolvida {
-  color: $border-color !important;
-  background-color: #d31616;
-  width: 200px;
-  height: 40px;
-  border-radius: 6px;
-  text-align: center;
-  line-height: 40px;
+  color: $bg-color;
+  background-color: #d3161696;
+  border-color: #28a745;
 }
-.ctn-solicitation {
+.resolvida:hover, .nao-resolvida:hover {
+  color: $bg-color;
+  background-color: $navbar-bg-color;
+  cursor: pointer;
+}
+.ctn-solicitation{
+  align-items: center;
   margin: 10px;
   height: 250px;
-  color: $border-color;
-  background: $navbar-bg-color;
-  border-radius: 5px;
+  width: 250px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 .ctn-solicitation div {
   margin: 10px;
@@ -161,7 +161,7 @@ td:last-child {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 40%;
+  width: 35%;
 }
 input {
   width: 450px !important;
@@ -177,7 +177,9 @@ input {
 .wrapper main {
   min-height: 900px;
 }
-.btn-status {
-  position: absolute;
-  bottom: 5px;
+.h-200{
+  height: 200px;
+}
+.h-50{
+  height: 50px;
 }

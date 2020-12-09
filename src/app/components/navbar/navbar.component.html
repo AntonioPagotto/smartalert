@@ -6,7 +6,7 @@
   <div class="navbar-header pl-2 pr-2 ml-3 text-center">
     <a class="navbar-brand m-0 w-100" href="#" navLink="/home" navLinkActivate="active">
       <!-- <i class="fa fa-flash mr-1"></i> -->
-      <img src="./assets/img/logo.png" alt="lightning logo" width="35px">
+      <img src="./assets/img/logo.png" style="border-radius: 50%; margin: 5px;" alt="lightning logo" width="35px">
       <span class="ml-1">SmartAlert</span>
     </a>
   </div>
@@ -19,24 +19,10 @@
     </button>
     <span class="user-profile nav-alert bg-danger"></span>
   </div>
-  <!-- left box -->
-  <ul class="navbar-nav flex-fill mt-1 align-items-center left-nav">
-    <li class="nav-item flex-fill">
-      <input class="form-control navbar-search" type="text" placeholder="Pesquisar . . .">
-    </li>
-  </ul>
 
   <!-- right menu -->
   <div class="collapse navbar-collapse right-nav" id="collapseBasic" [collapse]="isCollapsed">
     <ul class="navbar-nav ">
-      <li class="nav-item">
-        <a class="btn nav-link">
-          <i class="far fa-bell"></i>
-          <span class="link-text">Alerts</span>
-          <!-- <span class="badge badge-pill ba dge-danger">3</span> -->
-          <span class="nav-alert notifications"></span>
-        </a>
-      </li>
       <li class="nav-item">
         <a ref="#" routerLink="/manager" routerLinkActive="active" class="btn nav-link">
           <i class="fa fa-cog"></i>
@@ -45,12 +31,12 @@
           <span class="nav-alert messages"></span>
         </a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="btn nav-link">
           <i class="far fa-user"></i>
           <span class="link-text">Profile</span>
         </a>
-      </li>
+      </li> -->
       <li class="nav-item">
         <a (click)="logout()" class="btn nav-link">
           <i class="fas fa-sign-out-alt"></i>

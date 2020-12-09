@@ -1,89 +1,87 @@
-<div class="d-flex justify-space-between">
-  <mat-tab-group class="m-auto">
-    <mat-tab label="Cidades">
-      <mat-form-field class="w-100" appearance="legacy">
-        <mat-label>Adicionar Cidade</mat-label>
-        <input [(ngModel)]="newcity.name" autofocus matInput placeholder="Insira a nova Cidade">
-        <mat-icon class="cursor-pointer" (click)="addCity()" matSuffix>add</mat-icon>
-      </mat-form-field>
-      <div *ngFor="let city of cities">
-        <mat-card class="m-3">
-          <div class="d-flex justify-space-between">
-            <h6>
-              {{ city.name }}
-            </h6>
-            <mat-icon class="delete" (click)="removeCity(city.id)">delete</mat-icon>
-          </div>
-        </mat-card>
-      </div>
-    </mat-tab>
-
-
-    <mat-tab label="Cargos">
-      <mat-form-field class="w-100" appearance="legacy">
-        <mat-label>Adicionar Cargo</mat-label>
-        <input [(ngModel)]="newrole.name" autofocus matInput placeholder="Insira o novo Cargo">
-        <mat-icon class="cursor-pointer" (click)="addRole()" matSuffix>add</mat-icon>
-      </mat-form-field>
-      <div *ngFor="let role of roles">
-        <mat-card class="m-3">
-          <div class="d-flex justify-space-between">
-            <h6>
-              {{ role.name }}
-            </h6>
-            <mat-icon class="delete" (click)="removeRole(role.id)">delete</mat-icon>
-          </div>
-        </mat-card>
-      </div>
-    </mat-tab>
-
-
-    <mat-tab label="Usuários">
-      <div *ngFor="let user of users">
-        <mat-accordion (click)="lookUser(user.id)" class="m-1">
-          <mat-expansion-panel hideToggle>
-            <mat-expansion-panel-header>
-              <mat-panel-description>
-                <div class="d-flex justify-space-between">
-                  <h6>
-                    {{ user.name }}
-                  </h6>
-                  <mat-icon class="delete" (click)="removeUser(user.id)">delete</mat-icon>
-                </div>
-              </mat-panel-description>
-            </mat-expansion-panel-header>
-            <form [formGroup]="formUser">
-              <mat-form-field class="w-100">
-                <input matInput placeholder="Nome" type="password" formControlName="name" [(ngModel)]="user.name"
-                  name="name">
-              </mat-form-field>
-              <mat-form-field class="w-100">
-                <input matInput placeholder="Senha" type="password" formControlName="password"
-                  [(ngModel)]="user.password" name="password">
-              </mat-form-field>
-              <mat-form-field class="w-100" autofocus appearance="fill">
-                <mat-label>Cidade</mat-label>
-                <mat-select formControlName="local">
-                  <mat-option *ngFor="let city of cities" [value]="city.id" class="z-index-full">
-                    {{city.name}}
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
-              <mat-form-field class="w-100" autofocus appearance="fill">
-                <mat-label>Cargos</mat-label>
-                <mat-select formControlName="local">
-                  <mat-option *ngFor="let role of roles" [value]="role.id" class="z-index-full">
-                    {{role.name}}
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
-            </form>
-            <button mat-raised-button (click)="putUser(user.id)" color="primary">
-              Registre-se
-            </button>
-          </mat-expansion-panel>
-        </mat-accordion>
-      </div>
-    </mat-tab>
-  </mat-tab-group>
-</div>
+<mat-card>
+  <div class="d-flex justify-space-between ">
+    <mat-tab-group class="m-auto">
+      <mat-tab label="Cidades">
+        <mat-form-field class="w-100" appearance="legacy">
+          <mat-label>Adicionar Cidade</mat-label>
+          <input [(ngModel)]="newcity.name" autofocus matInput placeholder="Insira a nova Cidade">
+          <mat-icon class="cursor-pointer" (click)="addCity()" matSuffix>add</mat-icon>
+        </mat-form-field>
+        <div *ngFor="let city of cities">
+          <mat-card class="m-3">
+            <div class="d-flex justify-space-between">
+              <h6>
+                {{ city.name }}
+              </h6>
+              <mat-icon class="delete" (click)="removeCity(city.id)">delete</mat-icon>
+            </div>
+          </mat-card>
+        </div>
+      </mat-tab>
+      <mat-tab label="Cargos">
+        <mat-form-field class="w-100" appearance="legacy">
+          <mat-label>Adicionar Cargo</mat-label>
+          <input [(ngModel)]="newrole.name" autofocus matInput placeholder="Insira o novo Cargo">
+          <mat-icon class="cursor-pointer" (click)="addRole()" matSuffix>add</mat-icon>
+        </mat-form-field>
+        <div *ngFor="let role of roles">
+          <mat-card class="m-3">
+            <div class="d-flex justify-space-between">
+              <h6>
+                {{ role.name }}
+              </h6>
+              <mat-icon class="delete" (click)="removeRole(role.id)">delete</mat-icon>
+            </div>
+          </mat-card>
+        </div>
+      </mat-tab>
+      <mat-tab label="Usuários">
+        <div *ngFor="let user of users">
+          <mat-accordion (click)="lookUser(user.id)" class="m-1">
+            <mat-expansion-panel hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-description>
+                  <div class="d-flex w-100 justify-space-between">
+                    <h6>
+                      {{ user.name }}
+                    </h6>
+                    <mat-icon class="delete" (click)="removeUser(user.id)">delete</mat-icon>
+                  </div>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <form [formGroup]="formUser">
+                <mat-form-field class="w-100">
+                  <input matInput placeholder="Nome" type="password" formControlName="name" [(ngModel)]="user.name"
+                    name="name">
+                </mat-form-field>
+                <mat-form-field class="w-100">
+                  <input matInput placeholder="Senha" type="password" formControlName="password"
+                    [(ngModel)]="user.password" name="password">
+                </mat-form-field>
+                <mat-form-field class="w-100" autofocus appearance="fill">
+                  <mat-label>Cidade</mat-label>
+                  <mat-select formControlName="local">
+                    <mat-option *ngFor="let city of cities" [value]="city.id" class="z-index-full">
+                      {{city.name}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <mat-form-field class="w-100" autofocus appearance="fill">
+                  <mat-label>Cargos</mat-label>
+                  <mat-select formControlName="local">
+                    <mat-option *ngFor="let role of roles" [value]="role.id" class="z-index-full">
+                      {{role.name}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </form>
+              <button mat-raised-button (click)="putUser(user.id)" color="primary">
+                Registre-se
+              </button>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</mat-card>

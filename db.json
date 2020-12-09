@@ -68,15 +68,15 @@
   "solicitations": [
     {
       "id": 3,
-      "title": "Limpeza de Lote - Centro",
+      "title": "Limpeza de Lote",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      "status": "ATIVO",
+      "status": "NÃO LIDO",
       "local": "Rua Carlos Braga, 81 - Centro"
     },
     {
       "title": "Esgoto a céu aberto",
       "description": "Possui esgoto a céu aberto em frente a UNIFEI na altura do Rei Burgão. Aparentemente um bueiro explodiu e voou esgoto para todo lado e está fedendo muito na rua e até agora nenhuma providência foi tomada.",
-      "status": "ATIVO",
+      "status": "RESOLVIDO",
       "local": "Avenida BPS, 12458 - BPS",
       "data": "26-05-2020",
       "id": 4
@@ -84,18 +84,58 @@
     {
       "title": "Buraco no asfalto",
       "description": "Há um buraco gigante no asfalto na rua nova.",
-      "status": "ATIVO",
+      "status": "RESOLVIDO",
       "local": "Rua nova 432 - Centro",
       "data": "2020-11-24",
       "id": 5
     },
     {
-      "title": "Retirada de entulho no centro",
+      "title": "Retirada de entulho",
       "description": "Possui uma caçamba com entulho abandonado no centro da cidade",
-      "status": "ATIVO",
+      "status": "RESOLVIDO",
       "local": "Rua xavier lisboa 403, centro - itajubá",
       "data": "2020-11-25",
       "id": 6
+    },
+    {
+      "title": "Lixo na Rua",
+      "description": "Possui lixo na rua em frente a prefeitura.",
+      "status": "NÃO LIDO",
+      "local": "Em frente a prefeitura municipal",
+      "data": "2020-12-07",
+      "id": 7
+    },
+    {
+      "title": "Falta de Insumos no Hospital",
+      "description": "Não há mais insumos cirúrgicos no Hospital Municipal.",
+      "status": "NÃO LIDO",
+      "local": "Hospital Municipal",
+      "data": "2020-12-07",
+      "id": 8
+    },
+    {
+      "title": "Falta de Policiamento",
+      "description": "Há uma grande falta de policiamento nos bairros marginais.",
+      "status": "NÃO LIDO",
+      "local": "Bairros Marginais",
+      "data": "2020-12-07",
+      "id": 9
+    },
+    {
+      "title": "Falta de Material Escolar",
+      "description": "Há uma grande falta de material escolar nas escolas municipais.",
+      "status": "NÃO LIDO",
+      "local": "Escola Municipal Central Protótipa",
+      "data": "2020-05-20",
+      "id": 10
+    },
+    {
+      "title": "Ausência dos Vereadores",
+      "description": "Os vereadores não tem comparecido as reuniões semanais da câmara municipal",
+      "status": "NÃO LIDO",
+      "local": "Câmara Municipal",
+      "data": "2020-12-07",
+      "id": 11
     }
   ]
 }

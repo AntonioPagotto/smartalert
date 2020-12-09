@@ -25,6 +25,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { MatExpansionModule, MatSelectModule, MatSnackBarModule, MatTabsModule } from '@angular/material';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { SingleComponent } from './components/pages/solicitation/single/single.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     HomeComponent,
     CSolicitationComponent,
     ManagerComponent,
+    SingleComponent,
   ],
   imports: [
     BrowserModule,

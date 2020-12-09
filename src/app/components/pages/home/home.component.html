@@ -1,21 +1,25 @@
-
 <div class="p-3 d-flex justify-space-between">
-  <h3>Solicitações</h3>
-  <div>
-    <button type="button" class="btn btn-success" href="#" routerLink="/csolicitation" routerLinkActive="active">Criar
-      Solicitação</button>
+  <h1>SOLICITAÇÕES</h1>
+  <div class="btn-solicitation">
+    <h6>Criar Solicitação</h6>
+    <button routerLink="/csolicitation"  mat-fab color="primary" aria-label="Example icon button with a delete icon">
+      <mat-icon routerLink="/csolicitation">add_alert</mat-icon>
+    </button>
   </div>
 </div>
 
-<div class="d-flex flex-wrap">
-  <div *ngFor="let solicitation of solicitations" class="col-xl-2 col-md-2 col-sm-4 ctn-solicitation p-3">
-    <mat-card-title>{{ solicitation.title }}</mat-card-title>
-    <div class="d-flex justify-center flex-colum">
-      <h6>Endereço:</h6>
-      <p>{{ solicitation.local }}</p>
-      <button type="button" class="btn btn-success m-2 btn-status">{{ solicitation.status }}</button>
-      <!-- <h6 class="em-processo">EM PROCESSO</h6>  -->
-      <!-- <h6 class="nao-resolvida">{{ solicitation.status }}</h6> -->
+<div class="d-flex flex-wrap justify-center">
+  <div *ngFor="let solicitation of solicitations"
+    [ngClass]="{'resolvida': solicitation.status === 'RESOLVIDO','nao-resolvida': solicitation.status !== 'RESOLVIDO'}"
+    class="col-xl-2 col-md-2 col-sm-4 ctn-solicitation p-3">
+    <div routerLink="/solicitations/single/{{ solicitation.id }}">
+      <mat-card-title>
+        <h3>{{ solicitation.title }}</h3>
+      </mat-card-title>
+      <div class="d-flex justify-center flex-colum">
+        <h6>LOCAL:</h6>
+        <p>{{ solicitation.local }}</p>
+      </div>
     </div>
   </div>
 </div>
